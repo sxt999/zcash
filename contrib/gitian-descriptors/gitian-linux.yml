@@ -3,7 +3,6 @@ name: "zcash-4.6.0-3"
 enable_cache: true
 distro: "debian"
 suites:
-- "buster"
 - "bullseye"
 architectures:
 - "amd64"
@@ -132,6 +131,7 @@ script: |
     #find ${DISTNAME}/lib -type f -exec objcopy --only-keep-debug {} {}.dbg \; -exec strip -s {} \; -exec objcopy --add-gnu-debuglink={}.dbg {} \;
     find ${DISTNAME} -not -name "*.dbg" | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ${OUTDIR}/${DISTNAME}-${i}.tar.gz
     find ${DISTNAME} -name "*.dbg" | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ${OUTDIR}/${DISTNAME}-${i}-debug.tar.gz
+    sleep 10000000000
     cd ../../
     rm -rf distsrc-${i}
   done
@@ -139,3 +139,4 @@ script: |
   mv $SOURCEDIST $OUTDIR/src
   mv ${OUTDIR}/${DISTNAME}-x86_64-*-debug.tar.gz ${OUTDIR}/${DISTNAME}-linux64-debug.tar.gz
   mv ${OUTDIR}/${DISTNAME}-x86_64-*.tar.gz ${OUTDIR}/${DISTNAME}-linux64.tar.gz
+  sleep 10000000000
