@@ -42,8 +42,10 @@ if [ -e "$(which git 2>/dev/null)" -a "$(git rev-parse --is-inside-work-tree 2>/
 fi
 
 if [ -n "$DESC" ]; then
+    DESC="$DESC-from-genbuild"
     NEWINFO="#define BUILD_DESC \"$DESC\""
 elif [ -n "$SUFFIX" ]; then
+    SUFFIX="$SUFFIX-from-genbuild"
     NEWINFO="#define BUILD_SUFFIX $SUFFIX"
 else
     NEWINFO="// No build information available"
@@ -53,6 +55,7 @@ fi
 if [ "$INFO" != "$NEWINFO" ]; then
     echo "$NEWINFO" >"$FILE"
     if [ -n "$LAST_COMMIT_DATE" ]; then
+        LAST_COMMIT_DATE="$LAST_COMMIT_DATE-from-genbuild"
         echo "#define BUILD_DATE \"$LAST_COMMIT_DATE\"" >> "$FILE"
     fi
 fi
