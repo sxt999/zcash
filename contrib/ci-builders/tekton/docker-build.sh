@@ -17,7 +17,7 @@
 #  To build a zcash worker, please move ~/.zcash-params to this directory  
 #
 #  To build a zcash bench, please move benchmark-200k-UTXOs.tar.xz and 
-#  block-107134.tar.xz to this directory
+#  block-*.tar.xz to this directory
 #
 #  Important note: using buildx mechanism of docker allows given images to
 #  build for other/multiple architectures:
