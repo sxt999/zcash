@@ -1,3 +1,5 @@
+# Used to benchmmark layer for all zcash images
+
 ARG FROMBASEOS
 ARG FROMBASEOS_BUILD_TAG
 FROM electriccoinco/zcashd-worker-$FROMBASEOS$FROMBASEOS_BUILD_TAG
