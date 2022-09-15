@@ -92,7 +92,7 @@ docker push electriccoinco/zcashd-bench-ubuntu2004
 docker build . -f Dockerfile-build.apt --build-arg FROMBASEOS=ubuntu --build-arg FROMBASEOS_BUILD_TAG=22.04 -t electriccoinco/zcashd-build-ubuntu2204
 docker push electriccoinco/zcashd-build-ubuntu2204
 
-docker build . -f Dockerfile-tekton-worker --build-arg BASEOS=ubuntu --build-arg FROMBASEOS=ubuntu --build-arg FROMBASEOS_BUILD_TAG=2204 -t electriccoinco/zcashd-worker-ubuntu2004
+docker build . -f Dockerfile-tekton-worker --build-arg BASEOS=ubuntu --build-arg FROMBASEOS=ubuntu --build-arg FROMBASEOS_BUILD_TAG=2204 -t electriccoinco/zcashd-worker-ubuntu2204
 docker push electriccoinco/zcashd-worker-ubuntu2204
 
 docker build . -f Dockerfile-tekton-bench --build-arg BASEOS=ubuntu --build-arg FROMBASEOS=ubuntu --build-arg FROMBASEOS_BUILD_TAG=2204 -t electriccoinco/zcashd-bench-ubuntu2204
