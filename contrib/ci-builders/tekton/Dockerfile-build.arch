@@ -8,6 +8,7 @@ RUN pacman -Syyu --noconfirm \
     && pacman -S --noconfirm \
       base-devel \
       git \
+      jq \
       python3 \
       python-pip \
       ncurses \

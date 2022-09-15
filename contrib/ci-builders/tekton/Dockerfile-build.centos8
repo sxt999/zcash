@@ -5,6 +5,8 @@ FROM centos:8
 RUN yum update -y \
     && dnf group install -y "Development Tools" \
     && yum install -y \
+      epel-release \
+      jq \
       ncurses-compat-libs \
       python3 \
       python3-devel \
