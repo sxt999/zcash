@@ -30,7 +30,7 @@ Currently available images are hosted at https://hub.docker.com/r/electriccoinco
 `Dockerfile-tekton-bench` uses the above build images as a base and layers on toolchains needed for testing
 
 - benchmark-200k-UTXOs.tar.xz is used by performance-measurements.sh to run benchmarks for zcashd
-- block-107134.tar.xz is used by performance-measurements.sh to run benchmarks for zcashd
+- block-HEIGHT.tar.xz is used by performance-measurements.sh to run benchmarks for zcashd
 
 Currently available images are hosted at https://hub.docker.com/r/electriccoinco
 
