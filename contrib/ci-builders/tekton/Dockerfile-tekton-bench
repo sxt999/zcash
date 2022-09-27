@@ -6,6 +6,6 @@ FROM electriccoinco/zcashd-worker-$FROMBASEOS$FROMBASEOS_BUILD_TAG
 
 COPY ./benchmark-200k-UTXOs.tar.xz /home/benchmark-200k-UTXOs.tar.xz
 COPY ./block-107134.tar.xz /home/block-107134.tar.xz
-
-
-
+COPY ./block-1708048.tar.xz /home/block-1708048.tar.xz
+COPY ./block-1723244.tar.xz /home/block-1723244.tar.xz
+COPY ./perf_metrics.py /home/perf_metrics.py
