@@ -5,8 +5,8 @@ ARG FROMBASEOS_BUILD_TAG
 FROM $FROMBASEOS:$FROMBASEOS_BUILD_TAG
 
 RUN pacman -Sy archlinux-keyring --noconfirm && pacman-key --init && pacman-key --populate archlinux \
-    && pacman -Syyu --noconfirm \
-    && pacman -S --noconfirm \
+    && pacman -Syyu --noconfirm --ignore filesystem \
+    && pacman -S --noconfirm --ignore filesystem \
       base-devel \
       git \
       jq \
